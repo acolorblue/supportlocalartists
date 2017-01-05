@@ -3,6 +3,7 @@ body {
   color: white;
   font-family: "ahamonomonospaced", Courier New;
   font-size:20px;
+  text-transform: uppercase;
 }
 .prompt .output {
 display:none;
