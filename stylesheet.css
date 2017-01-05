@@ -5,9 +5,11 @@ body {
   font-size:20px;
   text-transform: uppercase;
 }
+
 .prompt .output {
 display:none;
 }
+
 .prompt .active:after {
   content: '_';
 }
