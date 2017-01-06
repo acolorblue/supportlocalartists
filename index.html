@@ -1,27 +1,112 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<!––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––- 
+                      WITH LOVE, ACOLORBLUE.
+  ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->
+
 	<title>Support Local Artists</title>
 
+
+	<meta name="pinterest" content="nopin" />
+
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+	<link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+	<link ref="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700|Open+Sans:400">
 
 	<link rel="stylesheet" href="http://acolorblue.co/fonts/ahamonomonospaced/stylesheet.css" type="text/css"/>
 
 	<link rel="shortcut icon" type="image/png" href="https://40.media.tumblr.com/67552bc8dcdaf7f2a400fdebbaba5a30/tumblr_o22d30IDlo1ulwja9o1_250.png" />
 
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 </head>
 <body>
 
-<main class="prompt">
-  <p class="question">Question: Why not support smaller local artists instead of art that's already popular?</p>
-  <p class="answer">You know, being Caroline taught me a valuable lesson. I thought you were my greatest enemy. When all along you were my best friend. The surge of emotion that shot through me when I saved your life taught me an even more valuable lesson: where Caroline lives in my brain. Goodbye, Caroline. You know, deleting Caroline just now taught me a valuable lesson. The best solution to a problem is usually the easiest one. And I\'ll be honest. Killing you? Is hard. You know what my days used to be like? I just tested. Nobody murdered me. Or put me in a potato. Or fed me to birds. I had a pretty good life. And then you showed up. You dangerous, mute lunatic. So you know what? You win. Just go. It\'s been fun. Don\'t come back.......</p>
-</main>
+
+<!-- Text editor -->
+<div class='topbar'>
+  <i class='fa fa-apple'></i>
+</div>
+
+<button class="texticon">
+  <i class='fa fa-file-text-o fa-3x'></i>
+  <br>
+  <br>
+  <span>Untitled.txt</span>
+</button>
+
+<button class="jpg">
+  <a href="https://twitter.com/acolorblue/status/803813269853110272" target="_blank">
+  <img src="https://github.com/acolorblue/supportlocalartists/blob/master/Thumbnail/'Tate-LaBianca'%20Charlie%20White,%201200.jpg?raw=true" width="58" height="45" title="'Tate-LaBianca' - Charlie White">
+  </a>
+  <br>
+  <br>
+  <span>'Tate-LaBianca'
+    <br>
+    Charlie White.jpg
+  </span>
+</button>
+
+
+
+
+<div class='app'>
+  <div class='top'>
+    <div class='buttons'>
+      <div class='circle close'>
+      
+      <a onclick="hide('window')" class="closebutton" href="#"><span><strong>x</strong></span></a>
+        
+      </div>
+      
+      <div class='circle minimize'>
+      
+       <a onclick="minimize('window')" class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+        
+      </div>
+      <div class='circle zoom'>
+      
+      <a onclick="zoom('window')"class="zoombutton" href="#"><span><strong>+</strong></span></a>
+        
+      </div>
+    </div>
+    <div class='title'>
+      Untitled.txt
+    </div>
+    <div class='info'>
+      Saved
+    </div>
+    <div class='clear'></div>
+  </div>
+  <div class='main'>
+    <p class='words'>220 words</p>
+    <div class='content'>
+      
+     
+     
+     <main class="prompt"> 
+      <h1>Title</h1>
+      <p class='italic'>Question: Why not support smaller local artists instead of art that's already popular?</p>
+      <p>You know, being Caroline taught me a valuable lesson. I thought you were my greatest enemy. When all along you were my best friend. The surge of emotion that shot through me when I saved your life taught me an even more valuable lesson: where Caroline lives is in my brain. Goodbye, Caroline. You know, deleting Caroline just now taught me a valuable lesson. The best solution to a problem is usually the easiest one. And I'll be honest. Killing you? Is hard. You know what my days used to be like? I just tested. Nobody murdered me. Or put me in a potato. Or fed me to birds. I had a pretty good life. And then you showed up. You dangerous, mute lunatic. So you know what? You win. Just go. It's been fun. Don't come back.......</p>
+      </main>
+
+      
+      
+    </div>
+  </div>
+</div>
 
   
 
   <script type="text/javascript">
-  
+ 
   	var $lines = $('.prompt p');
 $lines.hide();
 var lineContents = new Array();
@@ -42,8 +127,8 @@ var terminal = function() {
 
     var typeChar = function() {
       
-// Speed, Was 150 + 25
-      var rand = Math.round(Math.random() * 80) + 25;
+// Speed, Was 150, 80 + 25
+      var rand = Math.round(Math.random() * 40) + 25;
 
       setTimeout(function() {
         var char = content[charIdx++];
@@ -72,7 +157,74 @@ var terminal = function() {
 
 terminal();
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$(".app").draggable({
+  handle: ".top",
+  scroll: false
+});
+
+$("button").draggable({
+  scroll: false,
+  cancel: false
+});
+
+
+$('.close').click(function(){
+    $('.app').fadeOut();
+    $('button').fadeIn();
+});
+
+$('.minimize').click(function(){
+    $('.app').fadeOut();
+    $('button').fadeIn();
+});
+
+$('.zoom').click(function(){
+  $('.app').toggleClass('larger', 1000);
+});
+
+$('button').dblclick(function(){
+   $('.app').fadeIn();
+});
+
+$('.content').each(function(){
+    this.contentEditable = false;
+});
+
   </script>
 
 </body>
+
+<!-- CREDITS -->
+<!-- Orig. Text Editor Concept Design by Eduardo Higareda. -->
+<!-- Orig. OS Look in jQuery & Css by Adam Lindqvist. -->
+<!-- Redesigned and reprogrammed by ACOLORBLUE with MIT OS License.-->
+
+
+
 </html>

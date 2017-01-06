@@ -1,15 +1,342 @@
 body {
-  background-color: black;
-  color: white;
-  font-family: "ahamonomonospaced", Courier New;
-  font-size:20px;
-  text-transform: uppercase;
+  overflow: hidden;
+  margin: 0;
+/*   background: url(https://9to5mac.files.wordpress.com/2014/08/yosemite.jpg); */
+   background: url(https://pbs.twimg.com/media/Cye3jryXEAAymtC.jpg:large);
+  background-size: cover;
+  background-repeat: none;
+  height: 100vh;
+  font-family: ahamonomonospaced, 'Source Code Pro';
 }
 
 .prompt .output {
 display:none;
 }
-
 .prompt .active:after {
   content: '_';
 }
+
+
+p {
+  color: #444;
+}
+.italic {
+  color: #999;
+  font-style: italic;
+}
+h1 {
+  color: #454647;
+  font-size: 24px;
+}
+.topbar {
+  padding-left: 25px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  height: 30px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+
+.app {
+  position: absolute;
+  overflow: scroll;
+/*   border-radius: 5px 5px 0px 0px; */
+  border-radius: 5px 5px 5px 5px;
+  margin: 50px 200px;
+  width: 700px;
+  height: 500px;
+  box-shadow: 0 0 20px #333;
+}
+.larger {
+  width: 1000px;
+}
+.top {
+  cursor: move;
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  width: 100%;
+  padding: 10px 20px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.buttons {
+  position: relative;
+  float: left;
+  width: 33%;
+  z-index: 1;
+}
+
+.buttons:hover a {
+  visibility: visible;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+span {
+  line-height: 9px;
+  padding: 2px;
+  top: 0;
+  vertical-align: 50%;
+  font-size: 13px;
+}
+
+
+.circle {
+  float: left;
+  margin: 4px 16px 0 0;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* .circle:nth-child(1) {
+  background: #FF5E51;
+}
+.circle:nth-child(1):hover {
+  background: #ea1100;
+} */
+
+.close {
+  background: #ff5c5c;
+  font-size: 9pt;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #e33e41;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.close:active {
+  background: #c14645;
+  border: 1px solid #b03537;
+}
+
+.close:active .closebutton {
+  color: #4e0002;
+}
+
+.closebutton {
+  color: #820005;
+  visibility: hidden;
+  cursor: default;
+}
+
+
+
+
+
+
+/* .circle:nth-child(2) {
+  background: #FEBB00;
+}
+.circle:nth-child(2):hover {
+  background: #987000;
+} */
+
+.minimize {
+  background: #ffbd4c;
+  font-size: 9pt;
+  line-height: 11px;
+  margin-left: 4px;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #e09e3e;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.minimize:active {
+  background: #c08e38;
+  border: 1px solid #af7c33;
+}
+
+.minimize:active .minimizebutton {
+  color: #5a2607;
+}
+
+.minimizebutton {
+  color: #9a5518;
+  visibility: hidden;
+  cursor: default;
+}
+
+
+
+
+
+
+
+
+
+/* .circle:nth-child(3) {
+  background: #18CF37;
+}
+.circle:nth-child(3):hover {
+  background: #0d741f;
+} */
+
+.zoom {
+  background: #00ca56;
+  font-size: 9pt;
+  line-height: 11px;
+  margin-left: 6px;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #14ae46;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.zoom:active {
+  background: #029740;
+  border: 1px solid #128435;
+}
+
+.zoom:active .zoombutton {
+  color: #003107;
+}
+
+.zoombutton {
+  color: #006519;
+  visibility: hidden;
+  cursor: default;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.clear {
+  clear: left;
+}
+.title {
+  z-index: 0;
+  color: #888;
+  float: left;
+  width: 33%;
+  text-align: center;
+  margin-left: -10px;
+}
+.info {
+  color: #BFBFCF;
+  width: 33%;
+  float: right;
+  text-align: right;
+}
+.words {
+  color: #ccc;
+  margin-top: 0;
+  float: right;
+}
+.main {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px 50px 40px;
+  background: #f9f8f7;
+  width: 100%;
+}
+.content {
+  margin-top: 40px;
+  height: 100%;
+}
+
+
+button.texticon {
+  cursor: pointer;
+  position: absolute;
+  margin: 20px 0px 0px 25px;
+  background: rgba(255, 255, 255, 0);
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  font-family: ahamonomonospaced, 'Open Sans', sans-serif;
+  color: #fff;
+  text-shadow: 1px 1px #333;
+  outline: 0;
+}
+button.texticon:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+button.texticon span {
+  color: #FFF;
+  font-size: 14px;
+  text-shadow: 0 0 8px #333;
+}
+
+
+
+button.jpg {
+  cursor: pointer;
+  position: absolute;
+  margin: 120px 0px 0px 6px;
+  background: rgba(255, 255, 255, 0);
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  font-family: ahamonomonospaced, 'Open Sans', sans-serif;
+  color: #fff;
+  text-shadow: 1px 1px #333;
+  outline: 0;
+}
+button.jpg:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+button.jpg span {
+  color: #FFF;
+  font-size: 14px;
+  text-shadow: 0 0 8px #333;
+}
+
