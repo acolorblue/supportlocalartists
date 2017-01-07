@@ -7,6 +7,7 @@ body {
   background-repeat: none;
   height: 100vh;
   font-family: ahamonomonospaced, 'Source Code Pro';
+  overflow: hidden;
 }
 
 .prompt .output {
@@ -43,9 +44,12 @@ h1 {
   overflow: scroll;
 /*   border-radius: 5px 5px 0px 0px; */
   border-radius: 5px 5px 5px 5px;
-  margin: 50px 200px;
-  width: 700px;
-  height: 500px;
+/*   margin: 50,20px 200px; */
+  margin: 10px 170px;
+/*   width: 700px; */
+  width: 800px;
+/*   height: 500px; */
+  height: 650px;
   box-shadow: 0 0 20px #333;
 }
 .larger {
@@ -104,6 +108,7 @@ a:hover {
 
 span {
   line-height: 9px;
+/*   padding: 2.1px; */
   padding: 2px;
   top: 0;
   vertical-align: 50%;
