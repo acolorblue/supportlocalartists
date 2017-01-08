@@ -1,3 +1,20 @@
+::-webkit-scrollbar {
+   width: 0px;/* remove scrollbar space */
+   background: transparent;  /* optional: just make scrollbar invisible */
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 body {
   overflow: hidden;
   margin: 0;
@@ -33,8 +50,10 @@ h1 {
   padding-left: 25px;
   width: 100%;
   background: rgba(255, 255, 255, 0.8);
-  height: 30px;
-  font-size: 20px;
+/*   height: 30px; */
+  height: 25px;
+/*   font-size: 20px; */
+  font-size: 18px;
   line-height: 1.5;
 }
 
@@ -58,7 +77,8 @@ h1 {
 .top {
   cursor: move;
   position: relative;
-  background: rgba(255, 255, 255, 0.95);
+/*   background: rgba(255, 255, 255, 0.95); */
+  background: #ededed;
   width: 100%;
   padding: 10px 20px;
   -moz-box-sizing: border-box;
@@ -118,7 +138,8 @@ span {
 
 .circle {
   float: left;
-  margin: 4px 16px 0 0;
+/*   margin: 4px 16px 0 0; */
+  margin: 4px 6px 0 0;
   width: 13px;
   height: 13px;
   border-radius: 50%;
@@ -215,7 +236,7 @@ span {
   background: #00ca56;
   font-size: 9pt;
   line-height: 11px;
-  margin-left: 6px;
+  margin-left: 4px;
   width: 11px;
   height: 11px;
   border: 1px solid #14ae46;
@@ -289,12 +310,14 @@ span {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 20px 50px 40px;
+/*   padding: 20px 50px 40px; */
+  padding: 20px 40px 40px;
   background: #f9f8f7;
   width: 100%;
 }
 .content {
-  margin-top: 40px;
+/*   margin-top: 40px; */
+  margin-top: 8px;
   height: 100%;
 }
 
