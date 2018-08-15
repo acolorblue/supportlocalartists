@@ -23,7 +23,7 @@ body {
   background-size: cover;
   background-repeat: none;
   height: 100vh;
-  font-family: ahamonomonospaced, 'Source Code Pro';
+  font-family: Ahamono Monospaced, 'Source Code Pro';
   overflow: hidden;
 }
 
@@ -330,7 +330,7 @@ button.texticon {
   border: none;
   border-radius: 3px;
   padding: 10px;
-  font-family: ahamonomonospaced, 'Open Sans', sans-serif;
+  font-family: Ahamono Monospaced, 'Open Sans', sans-serif;
   color: #fff;
   text-shadow: 1px 1px #333;
   outline: 0;
@@ -354,7 +354,7 @@ button.jpg {
   border: none;
   border-radius: 3px;
   padding: 10px;
-  font-family: ahamonomonospaced, 'Open Sans', sans-serif;
+  font-family: Ahamono Monospaced, 'Open Sans', sans-serif;
   color: #fff;
   text-shadow: 1px 1px #333;
   outline: 0;
